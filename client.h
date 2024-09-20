@@ -1,17 +1,20 @@
-#include<iostream>
 
+#include <iostream>
+using namespace std ;
 #include <string>
 #include "Compte.h"
 
+
+
 class Client {
 private:
-    std::string nom;
-    std::string prenom;
+    string nom;
+    string prenom;
     Compte compte1; // Chaque client a deux comptes pour cet exemple
     Compte compte2;
 
 public:
-    Client(std::string n, std::string p, int code1, int code2);
+    Client(string n, string p, int code1, int code2);
 
     // Méthode pour afficher le menu d'opérations du client
     void menu_client();
@@ -25,5 +28,4 @@ public:
     // Nouvelle méthode : Demander si l'utilisateur souhaite faire une opération
     bool demander_operation();
 };
-
 
