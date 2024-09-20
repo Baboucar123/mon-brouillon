@@ -11,18 +11,18 @@ bool Compte::verifier_code(int code) {
 }
 
 void Compte::consulter_solde() {
-    cout << "Le solde du compte " << numero_compte << " est de " << solde << " €." << endl;
+    cout << "Le solde du compte " << numero_compte << " est de " << solde << " euros." << endl;
 }
 
 void Compte::crediter(double montant) {
     solde += montant;
-    cout << montant << " € ont ete credites sur le compte." << endl;
+    cout << montant << " euros ont ete credites sur le compte." << endl;
 }
 
 void Compte::debiter(double montant) {
     if (montant <= solde) {
         solde -= montant;
-        cout << montant << " € ont ete debites du compte." << endl;
+        cout << montant << " euros ont ete debites du compte." << endl;
     } else {
         cout << "Solde insuffisant pour effectuer cette operation." << endl;
     }
@@ -33,7 +33,7 @@ bool Compte::virement(Compte &destinataire, double montant) {
     if (montant <= solde) {
         solde -= montant;  // Débiter le compte source
         destinataire.crediter(montant);  // Créditer le compte destinataire
-        cout << montant << " € ont ete transferes au compte " << destinataire.numero_compte << "." << endl;
+        cout << montant << " euros ont ete transferes au compte " << destinataire.numero_compte << "." << endl;
         return true;
     } else {
         cout << "Solde insuffisant pour effectuer ce virement." << endl;
