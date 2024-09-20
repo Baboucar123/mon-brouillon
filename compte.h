@@ -1,4 +1,6 @@
+
 #include <iostream>
+using namespace std ;
 
 class Compte {
 private:
@@ -20,5 +22,4 @@ public:
     // Nouvelle méthode pour effectuer un virement
     bool virement(Compte &destinataire, double montant);
 };
-
 
