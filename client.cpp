@@ -8,7 +8,7 @@ Client::Client(string n, string p, int code1, int code2)
 
 bool Client::demander_operation() {
     char reponse;
-    cout << "Souhaitez-vous effectuer une opération sur vos comptes ? (y/n) : ";
+    cout << "Souhaitez-vous effectuer une operation sur vos comptes ? (y/n) : ";
     cin >> reponse;
     
     if (reponse == 'y' || reponse == 'Y') {
@@ -28,8 +28,8 @@ void Client::menu_client() {
     int choix;
     cout << "Bienvenue " << prenom << " " << nom << " !\n";
     cout << "Que souhaitez-vous faire ?\n";
-    cout << "1. Gérer le compte 1\n";
-    cout << "2. Gérer le compte 2\n";
+    cout << "1. Gerer le compte 1\n";
+    cout << "2. Gerer le compte 2\n";
     cout << "3. Effectuer un virement entre vos comptes\n";
     cin >> choix;
 
@@ -58,8 +58,8 @@ void Client::gerer_compte(Compte &compte) {
         do {
             cout << "\nQue voulez-vous faire ?\n";
             cout << "1. Consulter le solde\n";
-            cout << "2. Créditer le compte\n";
-            cout << "3. Débiter le compte\n";
+            cout << "2. Crediter le compte\n";
+            cout << "3. Debiter le compte\n";
             cout << "0. Quitter\n";
             cin >> option;
 
@@ -68,17 +68,17 @@ void Client::gerer_compte(Compte &compte) {
                     compte.consulter_solde();
                     break;
                 case 2:
-                    cout << "Montant à créditer : ";
+                    cout << "Montant a crediter : ";
                     cin >> montant;
                     compte.crediter(montant);
                     break;
                 case 3:
-                    cout << "Montant à débiter : ";
+                    cout << "Montant a debiter : ";
                     cin >> montant;
                     compte.debiter(montant);
                     break;
                 case 0:
-                    cout << "Déconnexion du compte.\n";
+                    cout << "Deconnexion du compte.\n";
                     break;
                 default:
                     cout << "Option non valide.\n";
