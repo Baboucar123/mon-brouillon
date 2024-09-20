@@ -14,7 +14,7 @@ bool Client::demander_operation() {
     if (reponse == 'y' || reponse == 'Y') {
         return true;
     } else {
-        cout << "Au revoir et à la prochaine !" << endl;
+        cout << "Au revoir et a la prochaine !" << endl;
         return false;
     }
 }
